@@ -89,11 +89,11 @@ namespace PracticeChallenge.Controllers
 		}
 
 		// GET ALL BOOKS THAT ARE NOT BORROWED (ISBN, TITLE) //
-		public Books Get(int ISBN, string Title, string Borrower)
+		public Books Get(int ISBN)
 		{
 			SqlConnection conn = DBconnection.GetConnection();
 
-			string query = "select * from Books where ISBN and Title and Borrower = " + ISBN + Title + Borrower;
+			string query = "select * from Books where ISBN and Title and Borrower = " + ISBN + Title;
 			Books output = new Books();
 			SqlCommand cmd;
 			SqlDataReader rdr;
