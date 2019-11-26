@@ -1,39 +1,70 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
-using System.Net;
-using System.Net.Http;
+using System.Web;
 using System.Web.Http;
+using PracticeChallenge.Models;
 
 namespace PracticeChallenge.Controllers
 {
-    public class BorrowerController : ApiController
-    {
-        // GET: api/Borrower
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
+	public class BorrowerController : ApiController
+	{
+		// GET ALL FROM BORROWERS//
+		public IEnumerable<Borrower> Get()
+		{
+			SqlConnection conn = DBconnection.GetConnection();
+			SqlCommand cmd;
+			SqlDataReader rdr;
+			String query;
+			List<Borrower> output = new List<Borrower>();
 
-        // GET: api/Borrower/5
-        public string Get(int id)
-        {
-            return "value";
-        }
+			try
+			{
+				conn.Open();
 
-        // POST: api/Borrower
-        public void Post([FromBody]string value)
-        {
-        }
 
-        // PUT: api/Borrower/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
+				query = "select * from Borrower";
+				cmd = new SqlCommand(query, conn);
+				rdr = cmd.ExecuteReader();
 
-        // DELETE: api/Borrower/5
-        public void Delete(int id)
-        {
-        }
-    }
+				while (rdr.Read())
+				{
+
+					output.Add(new Borrower(Convert.ToInt32(rdr.GetValue(0)), Convert.ToString(rdr.GetValue(1)), Convert.ToString(rdr.GetValue(2)), Convert.ToInt32(rdr.GetValue(3))));
+				}
+
+			}
+			catch (Exception e)
+			{
+				throw;
+			}
+			finally
+			{
+				if (conn.State == System.Data.ConnectionState.Open)
+				{
+					conn.Close();
+				}
+			}
+
+			return output;
+
+		}
+
+
+		// POST: api/Borrower
+		public void Post([FromBody]string value)
+		{
+		}
+
+		// PUT: api/Borrower/5
+		public void Put(int id, [FromBody]string value)
+		{
+		}
+
+		// DELETE: api/Borrower/5
+		public void Delete(int id)
+		{
+		}
+	}
 }

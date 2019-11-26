@@ -19,5 +19,10 @@ namespace PracticeChallenge.Models
 			Firstname = sFirstname;
 			DOB = sDOB;
 		}
+
+		public Borrower()
+		{
+
+		}
 	}
 }

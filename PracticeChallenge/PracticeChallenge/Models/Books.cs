@@ -20,5 +20,9 @@ namespace PracticeChallenge.Models
 			Author = sAuthor;
 
 		}
+
+		public Books()
+		{
+		}
 	}
 }
