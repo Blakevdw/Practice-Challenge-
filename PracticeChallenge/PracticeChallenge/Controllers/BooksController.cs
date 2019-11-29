@@ -93,7 +93,7 @@ namespace PracticeChallenge.Controllers
 		{
 			SqlConnection conn = DBconnection.GetConnection();
 
-			string query = "select * from Books where ISBN and Title and Borrower = " + ISBN + Title;
+			string query = "select * from Books where ISBN and Title and Borrower = " + ISBN + Title
 			Books output = new Books();
 			SqlCommand cmd;
 			SqlDataReader rdr;

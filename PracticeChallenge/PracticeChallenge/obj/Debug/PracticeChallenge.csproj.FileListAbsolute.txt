@@ -80,3 +80,7 @@ C:\Users\102535342\Documents\GitHub\Practice-Challenge-\PracticeChallenge\Practi
 C:\Users\102535342\Documents\GitHub\Practice-Challenge-\PracticeChallenge\PracticeChallenge\obj\Debug\PracticeChallenge.dll
 C:\Users\102535342\Documents\GitHub\Practice-Challenge-\PracticeChallenge\PracticeChallenge\obj\Debug\PracticeChallenge.pdb
 C:\Users\102535342\Documents\GitHub\Practice-Challenge-\PracticeChallenge\PracticeChallenge\obj\Debug\PracticeChallenge.csprojAssemblyReference.cache
+C:\Users\102535342.SWIN.005\Documents\GitHub\Practice-Challenge-\PracticeChallenge\PracticeChallenge\obj\Debug\PracticeChallenge.csprojAssemblyReference.cache
+C:\Users\102535342.SWIN.005\Documents\GitHub\Practice-Challenge-\PracticeChallenge\PracticeChallenge\obj\Debug\PracticeChallenge.csproj.CoreCompileInputs.cache
+C:\Users\102535342.SWIN.005\Documents\GitHub\Practice-Challenge-\PracticeChallenge\PracticeChallenge\obj\Debug\PracticeChallenge.dll
+C:\Users\102535342.SWIN.005\Documents\GitHub\Practice-Challenge-\PracticeChallenge\PracticeChallenge\obj\Debug\PracticeChallenge.pdb
